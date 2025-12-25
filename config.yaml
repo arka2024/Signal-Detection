@@ -1,0 +1,65 @@
+# Traffic Signal Management System Configuration
+
+simulation:
+  # SUMO simulation parameters
+  timestep: 1.0
+  max_steps: 3600  # 1 hour simulation
+  gui: True  # Enable SUMO GUI during development
+  network_file: "data/networks/default.net.xml"
+  routes_file: "data/routes/default.rou.xml"
+  
+  # Traffic scenarios
+  scenarios:
+    - name: "normal"
+      description: "Normal weekday traffic"
+      scale_factor: 1.0
+      
+    - name: "peak_hour"
+      description: "Morning/Evening peak hours"
+      scale_factor: 1.5
+      
+    - name: "festival"
+      description: "Festival/Event congestion"
+      scale_factor: 2.0
+      
+    - name: "emergency"
+      description: "Emergency situation (disaster evacuation, etc.)"
+      priority_lanes: True
+      scale_factor: 0.8
+
+reinforcement_learning:
+  # RL algorithm parameters
+  algorithm: "DQN"
+  learning_rate: 0.001
+  discount_factor: 0.95
+  exploration_rate: 0.1
+  batch_size: 64
+  memory_size: 10000
+  
+  # Training parameters
+  num_episodes: 1000
+  max_steps_per_episode: 3600
+  target_update_frequency: 10
+  
+  # Model architecture
+  hidden_layers: [128, 64]
+  activation: "relu"
+
+vision:
+  # Computer vision parameters
+  camera_fps: 10
+  detection_threshold: 0.5
+  vehicle_classes: ["car", "bus", "truck", "motorcycle", "bicycle"]
+  use_anpr: True  # Automatic Number Plate Recognition
+  
+dashboard:
+  # Dashboard configuration
+  port: 8501
+  refresh_rate: 1.0  # seconds
+  metrics:
+    - "average_waiting_time"
+    - "queue_length"
+    - "throughput"
+    - "congestion_index"
+  map_view: True
+  signal_control: True

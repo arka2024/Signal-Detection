@@ -1,0 +1,88 @@
+{
+  "analysis_timestamp": "2025-09-19 13:29:22",
+  "metrics": {
+    "Main St & Broadway": {
+      "avg_speed": 49.88,
+      "avg_queue_length": 2.27,
+      "avg_wait_time": 18.54,
+      "peak_hours": [
+        17,
+        8,
+        18
+      ],
+      "max_avg_queue": 4.62,
+      "max_queue_hour": 17,
+      "direction_ratio": 0.48,
+      "ns_traffic": 4.46,
+      "ew_traffic": 9.31
+    },
+    "5th Ave & Park Rd": {
+      "avg_speed": 50.48,
+      "avg_queue_length": 2.08,
+      "avg_wait_time": 17.24,
+      "peak_hours": [
+        17,
+        8,
+        18
+      ],
+      "max_avg_queue": 4.12,
+      "max_queue_hour": 17,
+      "direction_ratio": 0.58,
+      "ns_traffic": 4.44,
+      "ew_traffic": 7.68
+    },
+    "University Blvd & Market St": {
+      "avg_speed": 48.37,
+      "avg_queue_length": 2.91,
+      "avg_wait_time": 23.08,
+      "peak_hours": [
+        17,
+        18,
+        8
+      ],
+      "max_avg_queue": 6.23,
+      "max_queue_hour": 17,
+      "direction_ratio": 0.91,
+      "ns_traffic": 8.57,
+      "ew_traffic": 9.38
+    }
+  },
+  "efficiency_results": {
+    "Main St & Broadway": {
+      "efficiency_score": 33.5,
+      "weekday_avg_traffic": 7.77,
+      "weekend_avg_traffic": 4.68,
+      "weekend_weekday_ratio": 0.6
+    },
+    "5th Ave & Park Rd": {
+      "efficiency_score": 32.8,
+      "weekday_avg_traffic": 6.86,
+      "weekend_avg_traffic": 4.06,
+      "weekend_weekday_ratio": 0.59
+    },
+    "University Blvd & Market St": {
+      "efficiency_score": 33.8,
+      "weekday_avg_traffic": 10.23,
+      "weekend_avg_traffic": 5.84,
+      "weekend_weekday_ratio": 0.57
+    }
+  },
+  "recommendations": {
+    "Main St & Broadway": [
+      "Significant traffic imbalance detected: east-west has 52% more traffic. Consider adjusting signal timing to favor east-west direction.",
+      "Low efficiency score (33.5/100). Consider optimizing signal timing to reduce average wait time of 18.54 seconds.",
+      "Peak traffic hours detected at 17, 8, 18:00. Consider implementing rush hour signal timing plans during these periods."
+    ],
+    "5th Ave & Park Rd": [
+      "Significant traffic imbalance detected: east-west has 42% more traffic. Consider adjusting signal timing to favor east-west direction.",
+      "Low efficiency score (32.8/100). Consider optimizing signal timing to reduce average wait time of 17.24 seconds.",
+      "Peak traffic hours detected at 17, 8, 18:00. Consider implementing rush hour signal timing plans during these periods.",
+      "Weekend traffic is 41% lower than weekdays. Consider different signal timing plans for weekends."
+    ],
+    "University Blvd & Market St": [
+      "Low efficiency score (33.8/100). Consider optimizing signal timing to reduce average wait time of 23.08 seconds.",
+      "Peak traffic hours detected at 17, 18, 8:00. Consider implementing rush hour signal timing plans during these periods.",
+      "Weekend traffic is 43% lower than weekdays. Consider different signal timing plans for weekends."
+    ]
+  }
+}
