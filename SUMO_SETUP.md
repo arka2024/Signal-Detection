@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Setting Up SUMO for Traffic Signal Management System
 
 This guide will help you install and configure SUMO (Simulation of Urban MObility) for use with the Traffic Signal Management System.
